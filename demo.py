@@ -24,7 +24,7 @@ def parser():
     parser.add_argument('--out_path',dest='out_path',help='Output path for saving the figure',
                         default='data/demo',type=str)
     parser.add_argument('--cfg',dest='cfg',help='Config file to overwrite the default configs',
-                        default='SSH/configs/wider_pyramid.yml',type=str)
+                        default='SSH/configs/wider.yml',type=str)
     return parser.parse_args()
 
 if __name__ == "__main__":

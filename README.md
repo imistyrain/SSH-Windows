@@ -1,4 +1,29 @@
-# SSH: Single Stage Headless Face Detector
+# SSH-Windows
+
+This is the windows version for [SSH: Single Stage Headless Face Detector](https://github.com/mahyarnajibi/SSH)
+
+## How to build
+
+### clone the repository and build caffe-ssh
+	git clone --recursive https://github.com/imistyrain/SSH-Windows.git
+	cd SSH-Windows
+	git clone https://github.com/mahyarnajibi/caffe-ssh/tree/38d3be3c1710b145faac98f4de8b60c5c4abfd67
+    cd caffe-ssh
+    git checkout windows
+    scripts\build_win.cmd
+    cd ../../
+
+### build lib
+    cd lib
+    python setup-windows.py install
+    python setup_cuda.py build_ext --inplace
+
+### run the demo
+    python demo.py
+
+__Note:__
+
+2GB memory of GPU is not suffient to run the demo, pelease conider use GTX1080 or TITAN X
 
 ## Introduction
 This repository includes the code for training and evaluating the *SSH* face detector introduced in our [**ICCV 2017 paper**](https://arxiv.org/abs/1708.03979).
